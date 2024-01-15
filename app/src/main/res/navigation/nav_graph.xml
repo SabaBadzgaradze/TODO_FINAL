@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/groupsFragment">
+
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.portfolio.todo_mvvm.ui.groups.GroupsFragment"
+        android:label="GroupsFragment"
+        tools:layout="@layout/fragment_groups" >
+        <action
+            android:id="@+id/action_groupsFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.portfolio.todo_mvvm.ui.calendar.CalendarFragment"
+        android:label="CalendarFragment"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.portfolio.todo_mvvm.ui.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.portfolio.todo_mvvm.ui.tasks.TasksFragment"
+        android:label="TasksFragment"
+        tools:layout="@layout/fragment_tasks" >
+        <argument
+            android:name="label"
+            app:argType="string"
+            android:defaultValue="Tasks" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+
+</navigation>

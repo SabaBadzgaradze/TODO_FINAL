@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemGroup"
+    android:elevation="2dp"
+    app:cardBackgroundColor="@color/onBackground"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="25dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewIcon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:tint="@color/textPrimary"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_tasks" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/main"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="All Tasks"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/textSecondary"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text="7 Items"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

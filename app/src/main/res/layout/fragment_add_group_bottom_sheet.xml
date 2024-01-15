@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="30dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Group"
+        android:layout_marginBottom="25dp"
+        android:textSize="28sp"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold"
+        android:layout_gravity="start" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textPrimary"
+        android:textColorHint="@color/textSecondary"
+        android:hint="Group Name"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="12dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCreateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Create Group"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_primary_button" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="15dp"
+    android:orientation="vertical"
+    android:id="@+id/itemCalendar">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewWeekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THU"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/textSecondary" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewMonthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/textSecondary" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/indicator"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/textSecondary" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

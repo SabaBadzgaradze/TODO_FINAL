@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="30dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Grop"
+        android:layout_marginBottom="5dp"
+        android:textSize="28sp"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold"
+        android:layout_gravity="start" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete this group and its tasks?"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/textPrimary"
+        android:textStyle="normal"
+        android:layout_gravity="start" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:text="Cancel"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/textSecondary"
+            android:background="@drawable/bg_primary_button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDeleteGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:text="Delete Group"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/bg_primary_button" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

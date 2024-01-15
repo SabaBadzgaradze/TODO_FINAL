@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="30dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Task"
+        android:layout_marginBottom="25dp"
+        android:textSize="28sp"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold"
+        android:layout_gravity="start" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textPrimary"
+        android:textColorHint="@color/textSecondary"
+        android:hint="Task name"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textPrimary"
+        android:layout_marginVertical="12dp"
+        android:textColorHint="@color/textSecondary"
+        android:hint="Task note"
+        android:minHeight="100dp"
+        android:paddingHorizontal="15dp"
+        android:inputType="textMultiLine"
+        android:paddingVertical="12dp"
+        android:maxLines="4"
+        android:gravity="top|start"
+        android:background="@drawable/bg_edit_text"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_edit_text"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="5dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_tasks"
+                android:tint="@color/textPrimary"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:paddingTop="10dp"
+                android:text="Priority" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/buttonDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_edit_text"
+            android:paddingVertical="20dp"
+            android:layout_marginHorizontal="12dp"
+            android:paddingHorizontal="5dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_calendar"
+                android:tint="@color/textPrimary"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:paddingTop="10dp"
+                android:text="Date &amp; Time" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_edit_text"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="5dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/textPrimary"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:paddingTop="10dp"
+                android:text="Notification" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/main"
+            android:paddingTop="10dp"
+            android:text="Task Due: date here" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/textPrimary"
+            android:paddingTop="10dp"
+            android:text="Notification schedule: " />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attachment File"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/textPrimary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textSecondary"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:background="@drawable/bg_file_button"
+            android:text="Tap to add files" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCreateTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Create Task"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_primary_button" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

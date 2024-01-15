@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "65630393040",
+    "firebase_url": "https://authentication-8a3c5-default-rtdb.firebaseio.com",
+    "project_id": "authentication-8a3c5",
+    "storage_bucket": "authentication-8a3c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65630393040:android:1b920212ecd1115391c4d5",
+        "android_client_info": {
+          "package_name": "com.portfolio.todo_mvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65630393040-1n6qcdn4ctcj8vq6hgcrn3jiiir300vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjqX8dYDvrRU1oKFLxlFxVGj_shttdxLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65630393040-1n6qcdn4ctcj8vq6hgcrn3jiiir300vk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "65630393040-23vjfaelq1ev1o6jld5857i4eatoibhe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.learn.Threads"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
