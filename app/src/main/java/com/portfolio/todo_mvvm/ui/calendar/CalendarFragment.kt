@@ -1,7 +1,6 @@
 package com.portfolio.todo_mvvm.ui.calendar
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.portfolio.todo_mvvm.adapters.CalendarDateAdapter
+import com.portfolio.todo_mvvm.adapters.MyViewPagerAdapter
 import com.portfolio.todo_mvvm.adapters.TasksAdapter
 import com.portfolio.todo_mvvm.databinding.FragmentCalendarBinding
 import com.portfolio.todo_mvvm.main.MainActivity
@@ -47,7 +47,7 @@ class CalendarFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
-        setupTasksAdapter()
+//        setupTasksAdapter()
     }
 
     // MARK: - Private methods
@@ -63,6 +63,11 @@ class CalendarFragment: Fragment() {
         parentActivity.setAppBarTitle(currentMonthYear)
 
         setupAdapter(currentDate)
+
+        val myViewPagerAdapter = MyViewPagerAdapter(activity)
+
+        binding.viewPager.adapter = myViewPagerAdapter
+
     }
 
     private fun setupAdapter(currentDate: LocalDate) {
@@ -108,38 +113,39 @@ class CalendarFragment: Fragment() {
         return dateList
     }
 
-    private fun setupTasksAdapter() {
-        val layoutManager = LinearLayoutManager(activity)
-        binding.recyclerViewTasks.layoutManager = layoutManager
 
-        tasksAdapter = TasksAdapter(emptyList())
+//    private fun setupTasksAdapter() {
+//        val layoutManager = LinearLayoutManager(activity)
+//        binding.recyclerViewTasks.layoutManager = layoutManager
+//
+//        tasksAdapter = TasksAdapter(emptyList())
+//
+//        tasksAdapter.onItemClick = { task ->
+//            val updatedTask = task.copy(isCompleted = !task.isCompleted)
+//            viewModel.updateTask(updatedTask)
+//        }
+//
+//        tasksAdapter.onItemDelete = { task ->
+//            viewModel.deleteTask(task)
+//        }
+//
+//        binding.recyclerViewTasks.adapter = tasksAdapter
+//
+//        setupObservers()
+//    }
 
-        tasksAdapter.onItemClick = { task ->
-            val updatedTask = task.copy(isCompleted = !task.isCompleted)
-            viewModel.updateTask(updatedTask)
-        }
-
-        tasksAdapter.onItemDelete = { task ->
-            viewModel.deleteTask(task)
-        }
-
-        binding.recyclerViewTasks.adapter = tasksAdapter
-
-        setupObservers()
-    }
-
-    private fun setupObservers() {
-        val date = selectedDate ?: return
-
-        try {
-            viewModel.getTasksByDate(date).observe(viewLifecycleOwner) { tasks ->
-                tasksAdapter.updateTasks(tasks)
-            }
-        } catch (e: Exception) {
-            Log.e("Saba", e.message.toString())
-            e.localizedMessage?.let { Log.e("Saba", it) }
-        }
-    }
+//    private fun setupObservers() {
+//        val date = selectedDate ?: return
+//
+//        try {
+//            viewModel.getTasksByDate(date).observe(viewLifecycleOwner) { tasks ->
+//                tasksAdapter.updateTasks(tasks)
+//            }
+//        } catch (e: Exception) {
+//            Log.e("Saba", e.message.toString())
+//            e.localizedMessage?.let { Log.e("Saba", it) }
+//        }
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
